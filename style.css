@@ -771,3 +771,235 @@ span{
         font-size: 2.5rem;
     }
 }
+
+
+.miscellaneous {
+    background: var(--snd-bg-color);
+    padding-bottom: 3rem;
+}
+
+.miscellaneous .heading {
+    margin-bottom: 5rem;
+}
+
+.miscellaneous-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.misc-card {
+    background: var(--snd-bg-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+    flex: 0 0 calc(50% - 2rem);
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    min-height: 24rem;
+}
+
+.misc-card:hover {
+    transform: translateY(-1rem) scale(1.02);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.misc-card i {
+    font-size: 7rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.misc-card h3 {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.misc-card p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.misc-card .button-small {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.misc-card .button-small:hover {
+    background: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+    .miscellaneous-cards-container {
+        gap: 3rem;
+    }
+    .misc-card {
+        flex: 0 0 calc(48% - 1.5rem);
+        max-width: 45rem;
+        padding: 2.5rem;
+        min-height: 26rem;
+    }
+    .misc-card i {
+        font-size: 6rem;
+    }
+    .misc-card h3 {
+        font-size: 2.5rem;
+    }
+    .misc-card p {
+        font-size: 1.5rem;
+    }
+    .misc-card .button-small {
+        font-size: 1.4rem;
+        padding: 0.7rem 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .miscellaneous .heading {
+        font-size: 4.5rem;
+    }
+    .miscellaneous-cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .misc-card {
+        flex: 0 0 90%;
+        max-width: 45rem;
+        padding: 2rem;
+        min-height: unset;
+    }
+    .misc-card i {
+        font-size: 5rem;
+    }
+    .misc-card h3 {
+        font-size: 2.2rem;
+    }
+    .misc-card p {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .misc-card .button-small {
+        font-size: 1.3rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .miscellaneous .heading {
+        font-size: 4rem;
+    }
+    .misc-card {
+        padding: 1.5rem;
+    }
+    .misc-card i {
+        font-size: 4.5rem;
+    }
+    .misc-card h3 {
+        font-size: 2rem;
+    }
+    .misc-card p {
+        font-size: 1.3rem;
+    }
+}
+
+.contact{
+    background-color: var(--bg-color);
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  color: var(--main-color);
+}
+
+.contact form {
+  max-width: 80rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 0.25rem solid var(--main-color);
+  margin: 0.7rem 0;
+  resize: none;
+}   
+
+.contact form .input-box input{
+    width: 49%;
+    margin: 0.7rem 0.35rem; 
+}
+
+.contact form .button{
+    margin-top: 2rem;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-color);
+}
