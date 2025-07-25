@@ -226,3 +226,548 @@ span{
 .typ1:hover::after {
   transform: translateY(0) scale(1.2);
 }
+
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: none;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--snd-bg-color);
+}
+
+.about-img img {
+  width: 25vw;
+  border: 2px solid var(--main-color);
+  border-radius: 10%;
+  box-shadow: 5px 5px 40px var(--main-color);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.about-img img:hover{
+    box-shadow: 
+    0 0 25px var(--main-color),
+    0 0 35px var(--main-color),
+    0 0 45px var(--main-color);
+}
+
+.heading{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.about-content{
+    padding: 0 4rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 3rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem ;
+}
+
+/* Skills Section Code */
+.skills {
+    background: var(--bg-color); /* Use the main background color */
+    padding-bottom: 4rem; /* Reduced padding to bottom */
+}
+
+.skills .heading {
+    margin-bottom: 4rem; /* Slightly reduced space below the main heading */
+}
+
+.skills-category {
+    margin-bottom: 3rem; /* Slightly reduced space between different skill categories */
+    text-align: center;
+}
+
+.skills-category h3 {
+    font-size: 2.8rem; /* Slightly smaller font size */
+    color: var(--text-color);
+    margin-bottom: 2rem; /* Slightly reduced margin */
+    position: relative;
+    display: inline-block;
+}
+
+.skills-category h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -7px; /* Adjusted position */
+    transform: translateX(-50%);
+    width: 55%; /* Slightly narrower underline */
+    height: 2px; /* Thinner underline */
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Reduced space between skill items */
+}
+
+.skill-item {
+    background: var(--snd-bg-color);
+    border: 0.15rem solid var(--main-color); /* Slightly thinner border */
+    border-radius: 1.2rem; /* Slightly smaller border-radius */
+    padding: 2rem 2.5rem; /* Reduced padding */
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 0 0 calc(18% - 2rem); /* Adjusted for roughly 5 items per row, considering new gap */
+    max-width: 13rem; /* Reduced max width for each skill item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
+}
+
+.skill-item:hover {
+    transform: translateY(-0.8rem) scale(1.03); /* Slightly less lift and enlargement on hover */
+    box-shadow: 0 0 20px var(--main-color); /* Slightly smaller hover shadow */
+}
+
+.skill-item i {
+    font-size: 5rem; /* Smaller icon size */
+    color: var(--main-color);
+    margin-bottom: 0.8rem; /* Slightly reduced space */
+}
+
+.skill-item span {
+    font-size: 1.6rem; /* Slightly smaller font size for skill name */
+    font-weight: 600;
+    color: var(--text-color);
+    display: block;
+}
+
+/* Responsive adjustments for skills section */
+@media (max-width: 1200px) {
+    .skill-item {
+        flex: 0 0 calc(22% - 2rem); /* Adjust for 4-5 items per row */
+        max-width: 14rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .skill-item {
+        flex: 0 0 calc(30% - 2rem); /* 3 items per row on tablets */
+        max-width: 15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills .heading {
+        font-size: 4rem; /* Smaller heading */
+    }
+
+    .skills-category h3 {
+        font-size: 2.3rem; /* Smaller category heading */
+    }
+
+    .skill-item {
+        flex: 0 0 calc(45% - 2rem); /* 2 items per row on larger phones */
+        max-width: 18rem;
+        padding: 1.8rem 2.2rem; /* Reduced padding */
+    }
+
+    .skill-item i {
+        font-size: 4.5rem; /* Smaller icon */
+    }
+
+    .skill-item span {
+        font-size: 1.5rem; /* Smaller skill name font */
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-category h3 {
+        font-size: 2rem; /* Even smaller category heading */
+    }
+
+    .skill-item {
+        flex: 0 0 calc(80% - 2rem); /* 1 item per row on smaller phones */
+        max-width: 25rem;
+        padding: 1.5rem; /* More reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item {
+        flex: 0 0 100%; /* Full width on very small screens */
+        max-width: none;
+    }
+}
+
+/* Experience Section Code */
+.experience {
+    background: var(--snd-bg-color); /* Soft sunny yellow for the section background */
+    padding-bottom: 5rem;
+}
+
+.experience .heading {
+    margin-bottom: 5rem;
+}
+
+/* Industrial Internship Styles */
+.experience-internship {
+    margin-bottom: 6rem; /* Space between internship and projects */
+    text-align: center;
+}
+
+.experience-internship h3 {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.experience-internship h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.internship-item {
+    background: var(--bg-color); 
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    max-width: 100rem; 
+    margin: 0 auto; /* Center the box */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.internship-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.internship-header h4 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    font-weight: 750;
+}
+
+.internship-header .date {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.internship-header h5 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 650;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.internship-item p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-family: 'Tinos',sans-serif;
+}
+
+.internship-item ul {
+    list-style: disc;
+    margin-left: 2.5rem;
+    text-align: left;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.internship-item ul li {
+    margin-bottom: 0.8rem;
+    font-family: 'Tinos',sans-serif;
+}
+
+/* Projects Grid Styles */
+.experience-projects {
+    text-align: center;
+}
+
+.experience-projects h3 {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.experience-projects h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Responsive grid columns */
+    gap: 3rem; 
+    justify-content: center;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--bg-color); 
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Tile animation */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-1rem) scale(1.02);
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.project-img-container {
+    width: 100%;
+    height: 20rem; 
+    overflow: hidden;
+    border-bottom: 0.1rem solid var(--main-color); /* Separator for image and info */
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.4s ease; 
+}
+
+.project-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.project-info h4 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-info p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto; 
+    margin-bottom: 1.5rem;
+}
+
+.project-tech-stack i {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.project-tech-stack i:hover {
+    color: var(--main-color); 
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.project-links .preview-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-links .preview-link:hover {
+    background: var(--text-color); /* Darken button on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-links .preview-link i {
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+
+/* Responsive adjustments for Experience section */
+@media (max-width: 991px) {
+    .experience-internship h3,
+    .experience-projects h3 {
+        font-size: 3rem;
+    }
+
+    .internship-item {
+        padding: 2.5rem;
+    }
+
+    .internship-header h4 {
+        font-size: 2.2rem;
+    }
+
+    .internship-header .date {
+        font-size: 1.4rem;
+    }
+
+    .internship-header h5 {
+        font-size: 1.8rem;
+    }
+
+    .internship-item p,
+    .internship-item ul li {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    }
+
+    .project-card {
+        max-width: 35rem; /* Limit card width on smaller screens */
+        margin: 0 auto; /* Center cards if they don't fill the row */
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-internship h3,
+    .experience-projects h3 {
+        font-size: 2.8rem;
+    }
+
+    .internship-item {
+        padding: 2rem;
+    }
+
+    .internship-header {
+        flex-direction: column; /* Stack company and role on small screens */
+        align-items: flex-start;
+    }
+
+    .internship-header h4 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .internship-header .date {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .internship-header h5 {
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
+
+    .internship-item p,
+    .internship-item ul li {
+        font-size: 1.4rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        max-width: 90%; /* Allow cards to take more width */
+    }
+
+    .project-info h4 {
+        font-size: 2rem;
+    }
+
+    .project-info p {
+        font-size: 1.4rem;
+    }
+
+    .project-tech-stack i {
+        font-size: 2.2rem;
+    }
+
+    .project-links .preview-link {
+        font-size: 1.4rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-internship h3,
+    .experience-projects h3 {
+        font-size: 2.5rem;
+    }
+}
