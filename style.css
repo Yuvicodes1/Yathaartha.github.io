@@ -1003,3 +1003,109 @@ span{
   font-size: 16px;
   color: var(--text-color);
 }
+
+/* Responsive Design  */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+}
+
+/* Responsive Design for Header, Home, and About Sections */
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    #menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Hide the navbar off-screen */
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--main-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: .25s ease;
+    }
+
+    .navbar.active {
+        left: 0; /* Bring the navbar on-screen */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .home {
+        flex-direction: column; /* Stack image and content vertically */
+        text-align: center;
+    }
+
+    .home-content {
+        margin-left: 0;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw; /* Make image larger on mobile */
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .about {
+        flex-direction: column-reverse; /* Stack with image on top */
+        text-align: center;
+    }
+
+    .about-content {
+        padding: 0 2rem;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .about .button {
+        display: none; /* Hide the "Read More" button on smartphones */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+}
