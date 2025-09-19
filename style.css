@@ -1184,22 +1184,3 @@ span{
     transition: filter 0.3s ease;
 }
 
-/* apply to any of the icon elements above */
-.icon, .fi, .fab, .devicon-javascript-plain, svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* optional color override (for libraries that inherit color) */
-.icon--js { color: #f0db4f; }   /* JS yellow */
-.icon--html { color: #e34f26; } /* HTML5 orange */
-
-/* utility for screen-reader-only fallback text */
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px; overflow: hidden;
-  clip: rect(0,0,0,0); border: 0;
-}
