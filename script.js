@@ -50,3 +50,29 @@ modalOverlay.addEventListener('click', (e) => {
         closeModal();
     }
 });
+
+// Theme Toggle Logic
+const themeToggle = document.querySelector('#theme-toggle');
+const htmlEl = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    htmlEl.setAttribute('data-theme', 'dark');
+    themeToggle.classList.replace('fi-rr-moon', 'fi-rr-sun');
+}
+
+themeToggle.addEventListener('click', () => {
+    const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+
+    if (isDark) {
+        htmlEl.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.classList.replace('fi-rr-sun', 'fi-rr-moon');
+    } else {
+        htmlEl.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.classList.replace('fi-rr-moon', 'fi-rr-sun');
+    }
+});
