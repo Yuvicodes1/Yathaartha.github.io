@@ -52,15 +52,26 @@ modalOverlay.addEventListener('click', (e) => {
 });
 
 // Theme Toggle Logic
+// Theme Toggle Logic
 const themeToggle = document.querySelector('#theme-toggle');
+const themeToggleText = document.querySelector('.theme-toggle-text');
+const themeToggleIcon = themeToggle.querySelector('i');
 const htmlEl = document.documentElement;
 
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+const setToggleUI = (isDark) => {
+    themeToggleIcon.classList.toggle('fi-rr-moon', !isDark);
+    themeToggleIcon.classList.toggle('fi-rr-sun', isDark);
+    themeToggleText.textContent = isDark ? 'Light' : 'Dark';
+};
+
 if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     htmlEl.setAttribute('data-theme', 'dark');
-    themeToggle.classList.replace('fi-rr-moon', 'fi-rr-sun');
+    setToggleUI(true);
+} else {
+    setToggleUI(false);
 }
 
 themeToggle.addEventListener('click', () => {
@@ -69,10 +80,10 @@ themeToggle.addEventListener('click', () => {
     if (isDark) {
         htmlEl.removeAttribute('data-theme');
         localStorage.setItem('theme', 'light');
-        themeToggle.classList.replace('fi-rr-sun', 'fi-rr-moon');
+        setToggleUI(false);
     } else {
         htmlEl.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        themeToggle.classList.replace('fi-rr-moon', 'fi-rr-sun');
+        setToggleUI(true);
     }
 });
